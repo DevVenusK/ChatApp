@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3C4487052791AD2800D1324D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4487042791AD2800D1324D /* AppDelegate.swift */; };
-		3C4487092791AD2800D1324D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4487082791AD2800D1324D /* ViewController.swift */; };
 		3C44870E2791AD2900D1324D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C44870D2791AD2900D1324D /* Assets.xcassets */; };
 		3C4487112791AD2900D1324D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C44870F2791AD2900D1324D /* LaunchScreen.storyboard */; };
 		3C44871C2791AD2900D1324D /* ChatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44871B2791AD2900D1324D /* ChatAppTests.swift */; };
@@ -16,6 +15,11 @@
 		3C4487282791AD2900D1324D /* ChatAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4487272791AD2900D1324D /* ChatAppUITestsLaunchTests.swift */; };
 		3C4487362791AF1A00D1324D /* ModernRIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 3C4487352791AF1A00D1324D /* ModernRIBs */; };
 		3C4487392791AF3300D1324D /* KarrotFlex in Frameworks */ = {isa = PBXBuildFile; productRef = 3C4487382791AF3300D1324D /* KarrotFlex */; };
+		3C4487402791B20500D1324D /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44873C2791B20500D1324D /* RootRouter.swift */; };
+		3C4487412791B20500D1324D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44873D2791B20500D1324D /* RootViewController.swift */; };
+		3C4487422791B20500D1324D /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44873E2791B20500D1324D /* RootBuilder.swift */; };
+		3C4487432791B20500D1324D /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44873F2791B20500D1324D /* RootInteractor.swift */; };
+		3C4487462791B2D200D1324D /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4487452791B2D200D1324D /* AppComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 /* Begin PBXFileReference section */
 		3C4487012791AD2800D1324D /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4487042791AD2800D1324D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C4487082791AD2800D1324D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C44870D2791AD2900D1324D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C4487102791AD2900D1324D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C4487122791AD2900D1324D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		3C4487212791AD2900D1324D /* ChatAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4487252791AD2900D1324D /* ChatAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppUITests.swift; sourceTree = "<group>"; };
 		3C4487272791AD2900D1324D /* ChatAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3C44873C2791B20500D1324D /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		3C44873D2791B20500D1324D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		3C44873E2791B20500D1324D /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		3C44873F2791B20500D1324D /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		3C4487452791B2D200D1324D /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +107,8 @@
 		3C4487032791AD2800D1324D /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				3C4487042791AD2800D1324D /* AppDelegate.swift */,
-				3C4487082791AD2800D1324D /* ViewController.swift */,
+				3C4487442791B2BB00D1324D /* AppStart */,
+				3C44873B2791B1DD00D1324D /* Root */,
 				3C44870D2791AD2900D1324D /* Assets.xcassets */,
 				3C44870F2791AD2900D1324D /* LaunchScreen.storyboard */,
 				3C4487122791AD2900D1324D /* Info.plist */,
@@ -123,6 +131,26 @@
 				3C4487272791AD2900D1324D /* ChatAppUITestsLaunchTests.swift */,
 			);
 			path = ChatAppUITests;
+			sourceTree = "<group>";
+		};
+		3C44873B2791B1DD00D1324D /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				3C44873C2791B20500D1324D /* RootRouter.swift */,
+				3C44873D2791B20500D1324D /* RootViewController.swift */,
+				3C44873E2791B20500D1324D /* RootBuilder.swift */,
+				3C44873F2791B20500D1324D /* RootInteractor.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		3C4487442791B2BB00D1324D /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				3C4487042791AD2800D1324D /* AppDelegate.swift */,
+				3C4487452791B2D200D1324D /* AppComponent.swift */,
+			);
+			path = AppStart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C4487092791AD2800D1324D /* ViewController.swift in Sources */,
+				3C4487432791B20500D1324D /* RootInteractor.swift in Sources */,
+				3C4487462791B2D200D1324D /* AppComponent.swift in Sources */,
+				3C4487402791B20500D1324D /* RootRouter.swift in Sources */,
+				3C4487422791B20500D1324D /* RootBuilder.swift in Sources */,
+				3C4487412791B20500D1324D /* RootViewController.swift in Sources */,
 				3C4487052791AD2800D1324D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
