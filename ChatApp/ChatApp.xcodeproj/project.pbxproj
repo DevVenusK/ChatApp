@@ -14,6 +14,8 @@
 		3C44871C2791AD2900D1324D /* ChatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44871B2791AD2900D1324D /* ChatAppTests.swift */; };
 		3C4487262791AD2900D1324D /* ChatAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4487252791AD2900D1324D /* ChatAppUITests.swift */; };
 		3C4487282791AD2900D1324D /* ChatAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4487272791AD2900D1324D /* ChatAppUITestsLaunchTests.swift */; };
+		3C4487362791AF1A00D1324D /* ModernRIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 3C4487352791AF1A00D1324D /* ModernRIBs */; };
+		3C4487392791AF3300D1324D /* KarrotFlex in Frameworks */ = {isa = PBXBuildFile; productRef = 3C4487382791AF3300D1324D /* KarrotFlex */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4487392791AF3300D1324D /* KarrotFlex in Frameworks */,
+				3C4487362791AF1A00D1324D /* ModernRIBs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +141,10 @@
 			dependencies = (
 			);
 			name = ChatApp;
+			packageProductDependencies = (
+				3C4487352791AF1A00D1324D /* ModernRIBs */,
+				3C4487382791AF3300D1324D /* KarrotFlex */,
+			);
 			productName = ChatApp;
 			productReference = 3C4487012791AD2800D1324D /* ChatApp.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +217,11 @@
 				Base,
 			);
 			mainGroup = 3C4486F82791AD2700D1324D;
+			packageReferences = (
+				3C4487342791AF1A00D1324D /* XCRemoteSwiftPackageReference "ModernRIBs" */,
+				3C4487372791AF3300D1324D /* XCRemoteSwiftPackageReference "KarrotFlex" */,
+				3C44873A2791B01C00D1324D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3C4487022791AD2800D1324D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -586,6 +599,46 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C4487342791AF1A00D1324D /* XCRemoteSwiftPackageReference "ModernRIBs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DevYeom/ModernRIBs";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		3C4487372791AF3300D1324D /* XCRemoteSwiftPackageReference "KarrotFlex" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daangn/KarrotFlex.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		3C44873A2791B01C00D1324D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C4487352791AF1A00D1324D /* ModernRIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C4487342791AF1A00D1324D /* XCRemoteSwiftPackageReference "ModernRIBs" */;
+			productName = ModernRIBs;
+		};
+		3C4487382791AF3300D1324D /* KarrotFlex */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C4487372791AF3300D1324D /* XCRemoteSwiftPackageReference "KarrotFlex" */;
+			productName = KarrotFlex;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C4486F92791AD2700D1324D /* Project object */;
 }
