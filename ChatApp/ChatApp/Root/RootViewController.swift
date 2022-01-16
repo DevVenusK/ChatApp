@@ -21,4 +21,15 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func present(viewController: ViewControllable) {
+        viewController.uiviewController.modalPresentationStyle = .overFullScreen
+        present(viewController.uiviewController, animated: true, completion: nil)
+    }
+    
+    func dismiss(viewController: ViewControllable) {
+        if presentedViewController === viewController.uiviewController {
+            dismiss(animated: true, completion: nil)
+        }
+    }
 }
