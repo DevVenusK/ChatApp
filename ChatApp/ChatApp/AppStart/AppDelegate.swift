@@ -7,6 +7,7 @@
 
 import UIKit
 
+import Firebase
 import ModernRIBs
 
 @main
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let launchRouter = RootBuilder(dependency: AppComponent()).build()
         self.launchRouter = launchRouter
         launchRouter.launch(from: window)
+        
+        FirebaseApp.configure()
         return true
     }
 }
