@@ -21,24 +21,39 @@ protocol LoggedOutListener: AnyObject {
 }
 
 final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
-
+    
     weak var router: LoggedOutRouting?
     weak var listener: LoggedOutListener?
-
+    
+    private let authenticationService: AuthenticationServiceProtocol
+    
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: LoggedOutPresentable) {
+    init(presenter: LoggedOutPresentable,
+         authenticationService: AuthenticationServiceProtocol) {
+        self.authenticationService = authenticationService
         super.init(presenter: presenter)
         presenter.listener = self
     }
-
+    
     override func didBecomeActive() {
         super.didBecomeActive()
         // TODO: Implement business logic here.
     }
-
+    
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+}
+
+// MARK: - LoggedOutPresentableLister
+extension LoggedOutInteractor {
+    func didLogin(email: String?, password: String?) {
+        Task {
+            let auth = try await authenticationService.create(email: email, password: password)
+            guard auth.error == nil else { return }
+            print("Login Success", auth.result?.user.email)
+        }
     }
 }

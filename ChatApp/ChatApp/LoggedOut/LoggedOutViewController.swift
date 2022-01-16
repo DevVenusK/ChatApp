@@ -10,9 +10,7 @@ import UIKit
 import ModernRIBs
 
 protocol LoggedOutPresentableListener: AnyObject {
-    // TODO: Declare properties and methods that the view controller can invoke to perform
-    // business logic, such as signIn(). This protocol is implemented by the corresponding
-    // interactor class.
+    func didLogin(email: String?, password: String?)
 }
 
 final class LoggedOutViewController: UIViewController, LoggedOutPresentable, LoggedOutViewControllable {
@@ -114,6 +112,6 @@ extension LoggedOutViewController {
 // MARK: - Selector
 extension LoggedOutViewController {
     @objc private func didTapLoginButton(_ sender: UIButton) {
-        
+        listener?.didLogin(email: emailTextField?.text, password: passwordTextField?.text)
     }
 }
