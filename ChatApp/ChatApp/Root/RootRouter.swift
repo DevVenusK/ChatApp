@@ -17,10 +17,15 @@ protocol RootViewControllable: ViewControllable {
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
-
-    override init(interactor: RootInteractable,
-                  viewController: RootViewControllable) {
-        super.init(interactor: interactor, viewController: viewController)
+    
+    private let loggedOutBuilder: LoggedOutBuildable
+    
+    init(interactor: RootInteractable,
+         viewController: RootViewControllable,
+         loggedOutBuilder: LoggedOutBuildable) {
+        self.loggedOutBuilder = loggedOutBuilder
+        super.init(interactor: interactor,
+                   viewController: viewController)
         interactor.router = self
     }
 }

@@ -20,6 +20,10 @@
 		3C4487422791B20500D1324D /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44873E2791B20500D1324D /* RootBuilder.swift */; };
 		3C4487432791B20500D1324D /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44873F2791B20500D1324D /* RootInteractor.swift */; };
 		3C4487462791B2D200D1324D /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4487452791B2D200D1324D /* AppComponent.swift */; };
+		3C44874C2793FF4C00D1324D /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4487482793FF4C00D1324D /* LoggedOutRouter.swift */; };
+		3C44874D2793FF4C00D1324D /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4487492793FF4C00D1324D /* LoggedOutViewController.swift */; };
+		3C44874E2793FF4C00D1324D /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44874A2793FF4C00D1324D /* LoggedOutBuilder.swift */; };
+		3C44874F2793FF4C00D1324D /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44874B2793FF4C00D1324D /* LoggedOutInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		3C44873E2791B20500D1324D /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		3C44873F2791B20500D1324D /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		3C4487452791B2D200D1324D /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		3C4487482793FF4C00D1324D /* LoggedOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
+		3C4487492793FF4C00D1324D /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
+		3C44874A2793FF4C00D1324D /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
+		3C44874B2793FF4C00D1324D /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 			children = (
 				3C4487442791B2BB00D1324D /* AppStart */,
 				3C44873B2791B1DD00D1324D /* Root */,
+				3C4487472793FF3600D1324D /* LoggedOut */,
 				3C44870D2791AD2900D1324D /* Assets.xcassets */,
 				3C44870F2791AD2900D1324D /* LaunchScreen.storyboard */,
 				3C4487122791AD2900D1324D /* Info.plist */,
@@ -151,6 +160,17 @@
 				3C4487452791B2D200D1324D /* AppComponent.swift */,
 			);
 			path = AppStart;
+			sourceTree = "<group>";
+		};
+		3C4487472793FF3600D1324D /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				3C4487482793FF4C00D1324D /* LoggedOutRouter.swift */,
+				3C4487492793FF4C00D1324D /* LoggedOutViewController.swift */,
+				3C44874A2793FF4C00D1324D /* LoggedOutBuilder.swift */,
+				3C44874B2793FF4C00D1324D /* LoggedOutInteractor.swift */,
+			);
+			path = LoggedOut;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,11 +313,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C4487432791B20500D1324D /* RootInteractor.swift in Sources */,
+				3C44874D2793FF4C00D1324D /* LoggedOutViewController.swift in Sources */,
 				3C4487462791B2D200D1324D /* AppComponent.swift in Sources */,
 				3C4487402791B20500D1324D /* RootRouter.swift in Sources */,
 				3C4487422791B20500D1324D /* RootBuilder.swift in Sources */,
+				3C44874C2793FF4C00D1324D /* LoggedOutRouter.swift in Sources */,
 				3C4487412791B20500D1324D /* RootViewController.swift in Sources */,
+				3C44874F2793FF4C00D1324D /* LoggedOutInteractor.swift in Sources */,
 				3C4487052791AD2800D1324D /* AppDelegate.swift in Sources */,
+				3C44874E2793FF4C00D1324D /* LoggedOutBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
