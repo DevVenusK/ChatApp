@@ -19,14 +19,14 @@ final class LoggedOutViewController: UIViewController, LoggedOutPresentable, Log
     
     weak var listener: LoggedOutPresentableListener?
     
-    private var userNameTextField: UITextField?
+    private var emailTextField: UITextField?
     private var passwordTextField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         let stackView: UIStackView = buildStackView()
-        buildUserNameTextField(stackView: stackView)
+        buildEmailTextField(stackView: stackView)
         buildPasswordTextField(stackView: stackView)
         buildLoginButton(stackView: stackView)
     }
@@ -54,20 +54,20 @@ extension LoggedOutViewController {
         return stackView
     }
     
-    private func buildUserNameTextField(stackView: UIStackView) {
-        let userNameTextField: UITextField = {
+    private func buildEmailTextField(stackView: UIStackView) {
+        let emailTextField: UITextField = {
             let textField: UITextField = UITextField()
             textField.borderStyle = .line
-            textField.placeholder = "User Name"
+            textField.placeholder = "Email"
             return textField
         }()
         
-        self.userNameTextField = userNameTextField
+        self.emailTextField = emailTextField
         
-        stackView.addArrangedSubview(userNameTextField)
+        stackView.addArrangedSubview(emailTextField)
 
-        [userNameTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor),
-         userNameTextField.heightAnchor.constraint(equalToConstant: 44)]
+        [emailTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+         emailTextField.heightAnchor.constraint(equalToConstant: 44)]
             .forEach { $0.isActive = true }
     }
     
