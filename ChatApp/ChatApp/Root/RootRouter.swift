@@ -7,18 +7,20 @@
 
 import ModernRIBs
 
-protocol RootInteractable: Interactable {
+protocol RootInteractable: Interactable, LoggedOutListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
 
 protocol RootViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    func present(viewController: ViewControllable)
+    func dismiss(viewController: ViewControllable)
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
     
     private let loggedOutBuilder: LoggedOutBuildable
+    private var loggedOut: LoggedOutRouting?
     
     init(interactor: RootInteractable,
          viewController: RootViewControllable,
@@ -27,5 +29,21 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
         super.init(interactor: interactor,
                    viewController: viewController)
         interactor.router = self
+    }
+    
+    override func didLoad() {
+        super.didLoad()
+        attachLoggedOut()
+    }
+}
+
+// MARK: - Private Function
+extension RootRouter {
+    private func attachLoggedOut() {
+        guard loggedOut == nil else { return }
+        let loggedOut = loggedOutBuilder.build(withListener: interactor)
+        self.loggedOut = loggedOut
+        attachChild(loggedOut)
+        viewController.present(viewController: loggedOut.viewControllable)
     }
 }
