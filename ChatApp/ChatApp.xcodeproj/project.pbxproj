@@ -28,6 +28,9 @@
 		3C448754279411D300D1324D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3C448753279411D300D1324D /* FirebaseAuth */; };
 		3C448756279412B900D1324D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C448755279412B900D1324D /* GoogleService-Info.plist */; };
 		3C4487592794145700D1324D /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4487582794145700D1324D /* AuthenticationService.swift */; };
+		3C44875E279420AF00D1324D /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44875B279420AF00D1324D /* LoggedInRouter.swift */; };
+		3C44875F279420AF00D1324D /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44875C279420AF00D1324D /* LoggedInBuilder.swift */; };
+		3C448760279420AF00D1324D /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44875D279420AF00D1324D /* LoggedInInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		3C44874B2793FF4C00D1324D /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
 		3C448755279412B900D1324D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3C4487582794145700D1324D /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		3C44875B279420AF00D1324D /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
+		3C44875C279420AF00D1324D /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
+		3C44875D279420AF00D1324D /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		3C4487032791AD2800D1324D /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				3C44875A2794209900D1324D /* LoggedIn */,
 				3C4487572794144900D1324D /* Service */,
 				3C4487442791B2BB00D1324D /* AppStart */,
 				3C44873B2791B1DD00D1324D /* Root */,
@@ -189,6 +196,16 @@
 				3C4487582794145700D1324D /* AuthenticationService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		3C44875A2794209900D1324D /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				3C44875B279420AF00D1324D /* LoggedInRouter.swift */,
+				3C44875C279420AF00D1324D /* LoggedInBuilder.swift */,
+				3C44875D279420AF00D1324D /* LoggedInInteractor.swift */,
+			);
+			path = LoggedIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,12 +351,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C4487432791B20500D1324D /* RootInteractor.swift in Sources */,
+				3C44875E279420AF00D1324D /* LoggedInRouter.swift in Sources */,
 				3C44874D2793FF4C00D1324D /* LoggedOutViewController.swift in Sources */,
 				3C4487462791B2D200D1324D /* AppComponent.swift in Sources */,
 				3C4487402791B20500D1324D /* RootRouter.swift in Sources */,
+				3C448760279420AF00D1324D /* LoggedInInteractor.swift in Sources */,
 				3C4487592794145700D1324D /* AuthenticationService.swift in Sources */,
 				3C4487422791B20500D1324D /* RootBuilder.swift in Sources */,
 				3C44874C2793FF4C00D1324D /* LoggedOutRouter.swift in Sources */,
+				3C44875F279420AF00D1324D /* LoggedInBuilder.swift in Sources */,
 				3C4487412791B20500D1324D /* RootViewController.swift in Sources */,
 				3C44874F2793FF4C00D1324D /* LoggedOutInteractor.swift in Sources */,
 				3C4487052791AD2800D1324D /* AppDelegate.swift in Sources */,
